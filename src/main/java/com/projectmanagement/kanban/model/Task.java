@@ -11,15 +11,11 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     private Long owner_id;
-
 
     private Long created_by;
 
-
     private Long changed_by;
-
 
     private Long project_id;
 

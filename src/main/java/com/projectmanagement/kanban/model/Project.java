@@ -12,23 +12,6 @@ public class Project {
     private Long id;
     private Long milestone_id;
     private Long team_id;
-
-    public Long getMilestone_id() {
-        return milestone_id;
-    }
-
-    public void setMilestone_id(Long milestone_id) {
-        this.milestone_id = milestone_id;
-    }
-
-    public Long getTeam_id() {
-        return team_id;
-    }
-
-    public void setTeam_id(Long team_id) {
-        this.team_id = team_id;
-    }
-
     @Enumerated(EnumType.STRING)
     private Status status;
     private String name;
@@ -96,11 +79,19 @@ public class Project {
         this.status = status;
     }
 
-    public Long getMilestone() {
+    public Long getMilestone_id() {
         return milestone_id;
     }
 
-    public void setMilestone(Long milestone_id) {
+    public void setMilestone_id(Long milestone_id) {
         this.milestone_id = milestone_id;
+    }
+
+    public Long getTeam_id() {
+        return team_id;
+    }
+
+    public void setTeam_id(Long team_id) {
+        this.team_id = team_id;
     }
 }

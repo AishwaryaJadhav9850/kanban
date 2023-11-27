@@ -40,4 +40,43 @@ public class NotFoundAdvice {
         errorMap.put("Error Message: ",e.getMessage());
         return errorMap;
     }
+
+    @ResponseBody
+    @ExceptionHandler(ProjectNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public Map<String,String> exceptionHandler(ProjectNotFoundException e)
+    {
+        Map<String,String> errorMap = new HashMap<>();
+        errorMap.put("Error Message: ",e.getMessage());
+        return errorMap;
+    }
+
+    @ResponseBody
+    @ExceptionHandler(TeamMilestoneNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public Map<String,String> exceptionHandler(TeamMilestoneNotFoundException e)
+    {
+        Map<String,String> errorMap = new HashMap<>();
+        errorMap.put("Error Message: ",e.getMessage());
+        return errorMap;
+    }
+
+    @ResponseBody
+    @ExceptionHandler(UserTaskNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public Map<String,String> exceptionHandler(UserTaskNotFoundException e)
+    {
+        Map<String,String> errorMap = new HashMap<>();
+        errorMap.put("Error Message: ",e.getMessage());
+        return errorMap;
+    }
+    @ResponseBody
+    @ExceptionHandler(TaskNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public Map<String,String> exceptionHandler(TaskNotFoundException e)
+    {
+        Map<String,String> errorMap = new HashMap<>();
+        errorMap.put("Error Message: ",e.getMessage());
+        return errorMap;
+    }
 }
